@@ -84,3 +84,6 @@ Authorization: [string; required]
 ```json
 {"code":"INTERNAL_SERVER_ERROR","message":"[always present; string]"}
 ```
+
+## Notes
+- [Read more about updating metadata](../misc/metadata.md)
