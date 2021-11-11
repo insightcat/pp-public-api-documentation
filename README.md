@@ -22,3 +22,6 @@ Closed endpoints require a valid access token to be included in the header of th
 ### Product Usage related
 * [Fetch aggregated](endpoints/product-usage-fetch-aggregated.md) : `GET /api/v1/product-usage`
 * [Fetch on a Tenant Company](endpoints/product-usage-fetch-on-tenant-company.md) : `GET /api/v1/product-usage`
+
+___
+Made with ❤️ by [InsightCat](https://insightcat.com) 
