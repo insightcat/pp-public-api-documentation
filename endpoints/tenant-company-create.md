@@ -11,7 +11,7 @@ Content-Type: application/json
 Authorization: [string; required]
 ```
 
-**Body Constraints**
+**Body Constraints ([json-scheme](../json-schema/5.json))**
 ```json
 {
 	"tenantId": "[string; required; 1 to 255 chars]",
@@ -38,6 +38,9 @@ Authorization: [string; required]
 **Content Type** : `application/json`
 
 **Condition** : `a tenant company has been created successfully`
+
+**Json Schema** : [here](../json-schema/3.json)
+
 ```json
 {
   "tenantId": "123123336",

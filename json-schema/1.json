@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "required": ["daily", "total"],
+  "properties": {
+    "daily": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "product", "amount", "usageQuantity"],
+        "properties": {
+          "date": {"type": "string"},
+          "product": {"type": "string"},
+          "amount": {"type": "number"},
+          "usageQuantity": {
+            "type": "object",
+            "properties": {
+              "mb": {"type": "number"},
+              "b": {"type": "integer"}
+            }
+          }
+        }
+      }
+    },
+    "total": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["product", "amount", "usageQuantity"],
+        "properties": {
+          "product": {"type": "string"},
+          "amount": {"type": "number"},
+          "usageQuantity": {
+            "type": "object",
+            "properties": {
+              "mb": {"type": "number"},
+              "b": {"type": "integer"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

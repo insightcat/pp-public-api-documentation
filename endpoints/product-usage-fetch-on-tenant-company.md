@@ -1,29 +1,19 @@
-#  Update a tenant company
-**Path** : `/api/v1/tenants/{tenantId}`
+#  Fetch Product Usage records on a Tenant Company
+**Path** : `/api/v1/product-usage`
 
-**Path Arguments** : `tenantId`
+**URL Parameters** :
 
-**Method** : `PATCH`
+* `tenantId` : [required; string]
+* `periodStart` : [required; string; date (Y-m-d)]
+* `periodEnd` : [required; string; date (Y-m-d)]
+
+**Method** : `GET`
 
 **Auth required** : YES
 
 **Headers**
 ```
-Content-Type: application/json
 Authorization: [string; required]
-```
-
-**Body Constraints ([json-scheme](../json-schema/4.json))**
-```json
-{
-  "metadata": "[object; optional; up to 50 keys, with string key names up to 40 characters long and (string values up to 500 characters long or null values)]"
-}
-```
-**Body Sample**
-```json
-{
-  "metadata": {"foo": "bar", "old_key": null}
-}
 ```
 
 ##  Response
@@ -32,19 +22,53 @@ Authorization: [string; required]
 
 **Content Type** : `application/json`
 
-**Condition** : `tenant company has been updated`
-```json
-{}
-```
-**Status Code** : `400 Bad Request`
+**Condition** : `all went smoothly`
 
-**Content Type** : `application/json`
-
-**Condition** : `supplied metadata does not match our constraints`
+**Json Schema** : [here](../json-schema/1.json)
 ```json
-{"code":"BAD_METADATA","message":"[always present; string]"}
+{
+  "daily": [
+    {
+      "date": "2021-11-08",
+      "product": "metrics",
+      "amount": 0,
+      "usageQuantity": {
+        "mb": 0,
+        "b": 0
+      }
+    },
+    {
+      "date": "2021-11-09",
+      "product": "metrics",
+      "amount": 58.4855,
+      "usageQuantity": {
+        "mb": 389.9038,
+        "b": 408843766
+      }
+    },
+    {
+      "date": "2021-11-11",
+      "product": "metrics",
+      "amount": 0,
+      "usageQuantity": {
+        "mb": 0,
+        "b": 0
+      }
+    }
+  ],
+  "total": [
+    {
+      "product": "metrics",
+      "amount": 58.48,
+      "usageQuantity": {
+        "mb": 389.9038,
+        "b": 408843766
+      }
+    }
+  ]
+}
 ```
-*Status Code** : `404 Not Found`
+**Status Code** : `404 Not Found`
 
 **Content Type** : `application/json`
 
@@ -84,6 +108,3 @@ Authorization: [string; required]
 ```json
 {"code":"INTERNAL_SERVER_ERROR","message":"[always present; string]"}
 ```
-
-## Notes
-- [Read more about updating metadata](../misc/metadata.md)

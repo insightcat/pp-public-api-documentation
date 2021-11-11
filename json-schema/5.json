@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": ["tenantId", "email", "password"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "patternProperties": {
+        "": {"type": "string"}
+      }
+    },
+    "tenantId": {"type": "string"},
+    "email": {"type": "string"},
+    "password": {"type": "string"}
+  }
+}

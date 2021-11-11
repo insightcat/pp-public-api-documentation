@@ -14,6 +14,11 @@ Closed endpoints require a valid access token to be included in the header of th
 * [Update](endpoints/tenant-company-update.md) : `PATCH /api/v1/tenants/{tenantId}`
 * [Disable API Keys](endpoints/tenant-company-disable-api-keys.md) : `POST /api/v1/tenants/{tenantId}/disable-api-keys`
 * [Enable API Keys](endpoints/tenant-company-enable-api-keys.md) : `POST /api/v1/tenants/{tenantId}/enable-api-keys`
+* [Request Password Reset](endpoints/tenant-company-request-password-reset.md) : `POST /api/v1/tenants/{tenantId}/request-password-reset`
 
 ### Agent Config related
 * [Download](endpoints/download-agent-config.md) : `GET /api/v1/agent-config`
+
+### Product Usage related
+* [Fetch aggregated](endpoints/product-usage-fetch-aggregated.md) : `GET /api/v1/product-usage`
+* [Fetch on a Tenant Company](endpoints/product-usage-fetch-on-tenant-company.md) : `GET /api/v1/product-usage`

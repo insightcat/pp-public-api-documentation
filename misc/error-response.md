@@ -1,6 +1,6 @@
 # Error Response
 
-Every error, be it business or semantic, that is returned by the InsightCat PP Public API, has the following structure
+Every error, be it business or semantic, that is returned by the InsightCat PP Public API, has the following structure ([json-schema](../json-schema/0.json))
 ```json
 {
   "code": "[always present; string]",

@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "patternProperties": {
+        "": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

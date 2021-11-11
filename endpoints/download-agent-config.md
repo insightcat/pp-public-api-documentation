@@ -1,13 +1,11 @@
 #  Download an agent config file
 **Path** : `/api/v1/agent-config`
 
-**URL Parameters**: `os`, `agent`, `tenantId`
+**URL Parameters** : 
 
-`os`, available values: `mac`, `windows`, `linux`, `redhat`, `ubuntu`
-
-`agent`, available values: `fluentbit`, `fluentd`, `insightcat`, `logstash`, `prometheus`, `telegraf`
-
-**Full URL example** : `https://pp-public-api.insightcat.com/api/v1/agent-config?os=linux&agent=telegraf&tenantId=b2728ae4-0b4e-4422-bb90-94d735921dfa`
+* `os` : [required; string; values: `mac`, `windows`, `linux`, `redhat`, `ubuntu`]
+* `agent` : [required; string; values: `fluentbit`, `fluentd`, `insightcat`, `logstash`, `prometheus`, `telegraf`]
+* `tenantId`: [required; string]
 
 **Method** : `GET`
 
@@ -22,7 +20,7 @@ Authorization: [string; required]
 
 **Status Code** : `200 OK`
 
-**Condition** : `agent config was found and returned`
+**Condition** : `all went smoothly`
 
 **Content Type** : `text/html`
 
@@ -99,3 +97,6 @@ output {
 ```json
 {"code":"INTERNAL_SERVER_ERROR","message":"[always present; string]"}
 ```
+
+## Notes
+- **Full URL example** : `https://pp-public-api.insightcat.com/api/v1/agent-config?os=linux&agent=telegraf&tenantId=b2728ae4-0b4e-4422-bb90-94d735921dfa`

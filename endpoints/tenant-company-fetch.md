@@ -18,7 +18,10 @@ Authorization: [string; required]
 
 **Content Type** : `application/json`
 
-**Condition** : `tenant company was found within the partner account`
+**Condition** : `all went smoothly`
+
+**Json Schema** : [here](../json-schema/2.json)
+
 ```json
 {
   "tenantId": "123123336",

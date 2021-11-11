@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "required": ["tenantId", "email", "token", "signInURL", "metadata"],
+  "properties": {
+    "tenantId": {"type": "string"},
+    "email": {"type": "string"},
+    "token": {"type": "string"},
+    "signInURL": {"type": "string"},
+    "metadata": {
+      "type": "object",
+      "patternProperties": {
+        "": {"type": "string"}
+      }
+    }
+  }
+}
