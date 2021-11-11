@@ -1,3 +1,9 @@
+# HTTP API
+
+Dear reader, if you are planning on setting up an integration with InsightCat PP Public API, we recommend that you read this first
+- [Error Response](misc/error-response.md)
+- [Metadata](misc/metadata.md)
+
 ## Endpoints that require Authentication
 
 Closed endpoints require a valid access token to be included in the header of the request.
