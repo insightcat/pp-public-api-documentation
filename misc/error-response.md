@@ -8,7 +8,7 @@ Every error, be it business or semantic, that is returned by the InsightCat PP P
 }
 ```
 
-`code` is the field that actually says the reason why the error happened.
+`code` is the field that actually says the reason why the error happened. You can and SHOULD rely on the contents of this field since we treat it as a constant.
 
 `message` is just a "human-readable" form of the error. It was introduced for debug reasons. You SHOULD NEVER rely on the contents of this field as it may change over time. 
 
