@@ -7,7 +7,7 @@
 
 `agent`, available values: `fluentbit`, `fluentd`, `insightcat`, `logstash`, `prometheus`, `telegraf`
 
-**Full URL Sample** : `https://pp-public-api.insightcat.com/api/v1/agent-config?os=linux&agent=telegraf&tenantId=b2728ae4-0b4e-4422-bb90-94d735921dfa`
+**Full URL example** : `https://pp-public-api.insightcat.com/api/v1/agent-config?os=linux&agent=telegraf&tenantId=b2728ae4-0b4e-4422-bb90-94d735921dfa`
 
 **Method** : `GET`
 
