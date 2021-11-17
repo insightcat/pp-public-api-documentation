@@ -6,8 +6,9 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["date", "product", "amount", "usageQuantity"],
+        "required": ["tenantId", "date", "product", "amount", "usageQuantity"],
         "properties": {
+          "tenantId": {"type": "string"},
           "date": {"type": "string"},
           "product": {"type": "string"},
           "amount": {"type": "number"},

@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "required": ["tenantId", "email", "token", "signInURL", "metadata"],
+  "required": ["tenantId", "email", "token", "signInURL", "metadata", "owner"],
   "properties": {
     "tenantId": {"type": "string"},
     "email": {"type": "string"},
@@ -10,6 +10,14 @@
       "type": "object",
       "patternProperties": {
         "": {"type": "string"}
+      }
+    },
+    "owner": {
+      "type": "object",
+      "required": ["id", "email"],
+      "properties": {
+        "id": {"type": "string"},
+        "email": {"type": "string"}
       }
     }
   }

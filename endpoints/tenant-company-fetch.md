@@ -30,6 +30,10 @@ Authorization: [string; required]
   "signInURL": "https://devportal.insightcat.com/login?token-issuer=portal&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcG9ydGFsLWFwaS5kZXZwb3J0YWwuaW5zaWdodGNhdC5jb20vYXBpL3YxL3BwL3RlbmFudHMiLCJpYXQiOjE2MzY2MjA3MDMsImV4cCI6MTYzNjgzNjcwMywibmJmIjoxNjM2NjIwNzAzLCJqdGkiOiJTeFh4RkJpVDNvcmJIWWdqIiwic3ViIjoiNGQ0N2E2ODctNjhmNy00YjNmLWI0YjctYzlmMDk4YTY1NmU0IiwicHJ2IjoiMzM3NDQ5MmQ3NTFhN2RlMjhkMDRkZTA4OGU3ZGRmMTE4NDgzYTYwOCIsImNvbXBhbnlSb2xlIjoib3duZXIiLCJjb21wYW55SWQiOiI5M2U4M2FhNS1lOGMzLTQ1NmEtYmE2Yi0wYTU5MmRmOGMzMjAiLCJwcm9qZWN0cyI6WyI2NGI1NTJhYy1iZjNkLTRkNzEtYTg2Ni04YzBhMTg5M2JhNjMiXSwicHJvamVjdHNWMiI6W3siaWQiOiI2NGI1NTJhYy1iZjNkLTRkNzEtYTg2Ni04YzBhMTg5M2JhNjMiLCJyb2xlIjoib3duZXIifV19.L4zP7XldoEq_X9jD201DpOf2-NAWHoJgs8q23GoCVTM",
   "metadata": {
     "foo":"bar"
+  },
+  "owner": {
+    "id": "7883dbab-c0fa-4146-aeed-467ea008d612",
+    "email": "first-tenant+3@company.com"
   }
 }
 ```
