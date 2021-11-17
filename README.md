@@ -3,6 +3,7 @@
 Dear reader, if you are planning on setting up an integration with InsightCat PP Public API, we recommend that you read this first
 - [Error Response](misc/error-response.md)
 - [Metadata](misc/metadata.md)
+- [Logical context map](misc/context-map.md)
 
 ## Endpoints that require Authentication
 
