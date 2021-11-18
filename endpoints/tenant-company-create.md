@@ -92,6 +92,14 @@ Authorization: [string; required]
 ```json
 {"code":"BAD_METADATA","message":"[always present; string]"}
 ```
+**Status Code** : `400 Bad Request`
+
+**Content Type** : `application/json`
+
+**Condition** : `supplied password does not match our security policy`
+```json
+{"code":"BAD_PASSWORD","message":"[always present; string]"}
+```
 **Status Code** : `422 Unproccessable Entity`
 
 **Content Type** : `application/json`

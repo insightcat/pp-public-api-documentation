@@ -2,6 +2,14 @@
 
 **Content Type** : `application/json`
 
+**Condition** : ``
+```json
+{"code": "USER_NOT_FOUND","message": "[always present; string]"}
+```
+**Status Code** : `404 Not Found`
+
+**Content Type** : `application/json`
+
 **Condition** : `tenant company not found within the partner account`
 ```json
 {"code":"TENANT_NOT_FOUND","message":"[always present; string]"}

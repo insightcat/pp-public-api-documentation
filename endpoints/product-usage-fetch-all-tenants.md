@@ -1,4 +1,4 @@
-#  Fetch aggregated Product Usage records
+#  Fetch Product Usage records on All Tenants
 **Path** : `/api/v1/product-usage`
 
 **URL Parameters** :
@@ -28,6 +28,7 @@ Authorization: [string; required]
 {
   "daily": [
     {
+      "tenantId": "a46859b8-95bc-4ded-b0a2-2656287901fd",
       "date": "2021-11-08",
       "product": "metrics",
       "amount": 0,
@@ -37,6 +38,7 @@ Authorization: [string; required]
       }
     },
     {
+      "tenantId": "bb799a72-b6a7-4433-8310-04257e5276b0",
       "date": "2021-11-09",
       "product": "metrics",
       "amount": 58.4855,
@@ -46,6 +48,7 @@ Authorization: [string; required]
       }
     },
     {
+      "tenantId": "87691acb-a2ed-4ec4-aaf2-f756a007a12e",
       "date": "2021-11-11",
       "product": "metrics",
       "amount": 0,

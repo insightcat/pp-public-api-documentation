@@ -1,19 +1,25 @@
-#  Fetch Product Usage on a given Tenant Company
-**Path** : `/api/v1/product-usage`
+#  Update user's password
+**Path** : `/api/v1/tenants/{tenantId}/users/{userId}/password`
 
-**URL Parameters** :
-
-* `tenantId` : [required; string]
-* `periodStart` : [required; string; date (Y-m-d)]
-* `periodEnd` : [required; string; date (Y-m-d)]
-
-**Method** : `GET`
+**Method** : `PUT`
 
 **Auth required** : YES
 
 **Headers**
 ```
+Content-Type: application/json
 Authorization: [string; required]
+```
+
+**Body Constraints ([json-scheme](../json-schema/6.json))**
+```json
+{
+  "password": "[string; required; 8 to 128 chars, at least 1 uppercase letter, at least 1 lowercase letter, at least 1 digit]"
+}
+```
+**Body Sample**
+```json
+{"password": "Qwerty123#"}
 ```
 
 ##  Response
@@ -22,54 +28,17 @@ Authorization: [string; required]
 
 **Content Type** : `application/json`
 
-**Condition** : `all went smoothly`
-
-**Json Schema** : [here](../json-schema/1.json)
+**Condition** : `password updated successfully`
 ```json
-{
-  "daily": [
-    {
-      "tenantId": "a46859b8-95bc-4ded-b0a2-2656287901fd",
-      "date": "2021-11-08",
-      "product": "metrics",
-      "amount": 0,
-      "usageQuantity": {
-        "mb": 0,
-        "b": 0
-      }
-    },
-    {
-      "tenantId": "a46859b8-95bc-4ded-b0a2-2656287901fd",
-      "date": "2021-11-09",
-      "product": "metrics",
-      "amount": 58.4855,
-      "usageQuantity": {
-        "mb": 389.9038,
-        "b": 408843766
-      }
-    },
-    {
-      "tenantId": "a46859b8-95bc-4ded-b0a2-2656287901fd",
-      "date": "2021-11-11",
-      "product": "metrics",
-      "amount": 0,
-      "usageQuantity": {
-        "mb": 0,
-        "b": 0
-      }
-    }
-  ],
-  "total": [
-    {
-      "product": "metrics",
-      "amount": 58.48,
-      "usageQuantity": {
-        "mb": 389.9038,
-        "b": 408843766
-      }
-    }
-  ]
-}
+{}
+```
+**Status Code** : `404 Not Found`
+
+**Content Type** : `application/json`
+
+**Condition** : ``
+```json
+{"code": "USER_NOT_FOUND","message": "[always present; string]"}
 ```
 **Status Code** : `404 Not Found`
 
@@ -78,6 +47,14 @@ Authorization: [string; required]
 **Condition** : `tenant company not found within the partner account`
 ```json
 {"code":"TENANT_NOT_FOUND","message":"[always present; string]"}
+```
+**Status Code** : `400 Bad Request`
+
+**Content Type** : `application/json`
+
+**Condition** : `supplied password does not match our security policy`
+```json
+{"code":"BAD_PASSWORD","message":"[always present; string]"}
 ```
 **Status Code** : `401 Unauthorized`
 
