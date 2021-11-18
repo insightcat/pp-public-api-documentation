@@ -36,9 +36,9 @@ Authorization: [string; required]
 
 **Content Type** : `application/json`
 
-**Condition** : ``
+**Condition** : `supplied user not found`
 ```json
-{"code": "USER_NOT_FOUND","message": "[always present; string]"}
+{"code": "USER_NOT_FOUND","message":"[always present; string]"}
 ```
 **Status Code** : `404 Not Found`
 
