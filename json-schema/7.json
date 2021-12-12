@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": ["id", "projectId", "validUntil", "createdAt", "keySecret", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "projectId": {"type": "string"},
+    "validUntil": {"type": "number"},
+    "createdAt": {"type": "number"},
+    "keySecret": {"type": "string"},
+    "name": {"type": "string"}
+  }
+}
